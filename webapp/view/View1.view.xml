@@ -1,0 +1,52 @@
+<mvc:View controllerName="sap.kt.excle.excle.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:u="sap.ui.unified">
+	<Shell id="shell">
+		<App id="app">
+			<pages>
+				<Page id="page" title="Read From Excel">
+					<customHeader>
+						<Bar>
+							<contentMiddle>
+								<Label text="Read Data From Excel"/>
+							</contentMiddle>
+							<contentRight>
+								<u:FileUploader id="FileUploaderId" sameFilenameAllowed="true" iconOnly="false" buttonOnly="true" fileType="XLSX,xlsx"
+									icon="sap-icon://upload" iconFirst="true" style="Emphasized" change="onUpload"/>
+							</contentRight>
+						</Bar>
+					</customHeader>
+					<content>
+						 <Table items="{localModel>/items}"  >
+            <columns>
+                <Column >
+                    <Text text="CoucurID"></Text>
+                </Column>
+                <Column >
+                    <Text text="CoucurName"></Text>
+                </Column>
+                <Column >
+                    <Text text="Counter Date"></Text>
+                </Column>
+                <Column >
+                    <Text text="End Date"></Text>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem press="onPresNavigation" type="Navigation"  >
+                    <cells>
+                        <Text text="{localModel>CoucurID}"/>
+                        <Text text="{localModel>CoucurName}"/>
+                        <Text text="{localModel>StartDate}"/>
+                        <Text text="{localModel>EndDate}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+					</content>
+				</Page>
+			</pages>
+		</App>
+	</Shell>
+</mvc:View>

@@ -1,0 +1,52 @@
+<mvc:View controllerName="sap.kt.excle.excle.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:f="sap.ui.layout.form" >
+	<Page >
+        <content>
+
+        <Table items="{oExpModel>/items}" id="tabel">
+            <columns>
+                <Column >
+                    <Text text="CoucurID"></Text>
+                </Column>
+                <Column >
+                    <Text text="CoucurName"></Text>
+                </Column>
+                <Column >
+                    <Text text="StartDate"></Text>
+                </Column>
+                <Column >
+                    <Text text="EndDate"></Text>
+                </Column>
+                <Column >
+                    <Text text="CItemNo"></Text>
+                </Column>
+                <Column >
+                    <Text text="CitemName"></Text>
+                </Column>
+                <Column >
+                    <Text text="Amount"></Text>
+                </Column>
+                <Column >
+                    <Text text="Date"></Text>
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem >
+                    <cells>
+                        <Text text="{oExpModel>CoucurID}"></Text>
+                        <Text text="{oExpModel>CoucurName}"></Text>
+                        <Text text="{oExpModel>StartDate}"></Text>
+                        <Text text="{oExpModel>EndDate}"></Text>
+                        <Text text="{oExpModel>CItemNo}"></Text>
+                        <Text text="{oExpModel>CitemName}"></Text>
+                        <Text text="{oExpModel>Amount}"></Text>
+                        <Text text="{oExpModel>Date}"></Text>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
